@@ -4,7 +4,7 @@
 
 int binarySearch(const std::vector<int>& vector, int item)
 {
-    int low = 0;
+    int low = 0; 
     int high = vector.size() - 1;
 
     while (low <= high)
