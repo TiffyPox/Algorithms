@@ -15,6 +15,8 @@ int addNumbers(std::vector<int> &v)
         }
     }
 
+    // to be completed
+
     std::cout << "Total is " << total;
 
     return 0;
