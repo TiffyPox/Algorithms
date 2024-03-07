@@ -1,30 +1,27 @@
 #include <iostream>
 #include <vector>
 
-int addNumbers(std::vector<int> &v)
+void addNumbers(const std::vector<int>& v)
 {
-    int total = 0;
+    int answer = 0;
 
-    for (int i = 0; i <= v.size(); ++i)
+    if (v.size() == 0)
     {
-        int next = v[i] + 1;
-
-        if (i == next)
-        {
-            total = v.size(); // base case
-        }
+        std::cout << "No numbers to add!" << std::endl; // base case
+        return;
     }
 
-    // to be completed
+	for (auto i = v.begin(); i < v.end(); ++i)
+	{
+		answer += *i;
+	}
 
-    std::cout << "Total is " << total;
-
-    return 0;
+	std::cout << answer << std::endl;
 }
 
 int main()
 {
-    std::vector<int> nums = {1, 1, 1, 1, 1, 1};
+    std::vector<int> nums = {2, 1, 2, 3, 1, 1};
 
     addNumbers(nums);
 
