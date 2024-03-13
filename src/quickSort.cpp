@@ -64,11 +64,11 @@ int main()
 {
     std::vector<int> nums = {10, 5, 2, 3, 22};
 
-    PrintVector(nums);
+    PrintVector(nums); // Unsorted Vector
 
     QuickSort(nums);
 
-    PrintVector(nums);
+    PrintVector(nums); // Sorted Vector
 
     return 0;
 }
