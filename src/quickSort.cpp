@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 void PrintVector(const std::vector<int>& v)
 {
@@ -16,13 +17,6 @@ void PrintVector(const std::vector<int>& v)
     }
 }
 
-void Swap(int *x, int *y)
-{
-    int temp = *x;
-    *x = *y;
-    *y = temp;
-}
-
 int Partition(std::vector<int>& v, int low, int high)
 {
     int pivot = v[high];
@@ -33,12 +27,12 @@ int Partition(std::vector<int>& v, int low, int high)
     {
         if (v[j] <= pivot)
         {
-            Swap(&v[i], &v[j]);
+            std::swap(v[i], v[j]);
             i++;
         }
     }
 
-    Swap(&v[i], &v[high]);
+    std::swap(v[i], v[high]); // placing the pivot into the correct position
 
     return i;
 }
@@ -69,6 +63,14 @@ int main()
     QuickSort(nums);
 
     PrintVector(nums); // Sorted Vector
+
+    std::vector<int> nums2 = {16, 23, 4, 8, 42, 15};
+
+    PrintVector(nums2);
+
+    QuickSort(nums2);
+
+    PrintVector(nums2);
 
     return 0;
 }
