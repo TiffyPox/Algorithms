@@ -1,9 +1,9 @@
 #include <iostream>
-#include <raymath.h>
+#include <cmath>
 
 int binarySearch(int num)
 {
-    int answer = log(num) / log(2);
+    int answer = std::log(num) / std::log(2);
 
     return answer;
 }
@@ -15,6 +15,7 @@ int main()
     std::cout << "Here are 10 lockers..." << std::endl;
 
     for (int i : nums)
+    
     {
         std::cout << i << " ";
     }
