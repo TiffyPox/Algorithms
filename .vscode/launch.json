@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Run Current File",
+        "type": "cppvsdbg",
+        "request": "launch",
+        "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": true, // Set to false to run in the integrated terminal
+        "MIMode": "gdb",
+        "preLaunchTask": "build"
+      }
+    ]
+  }
+  
