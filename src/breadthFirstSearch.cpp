@@ -16,6 +16,7 @@ int main()
 	std::cout << "Looking for a mango seller..." << std::endl;
 
     std::map<std::string, std::vector<std::string>> graph;
+	int total = 0;
 
 	graph["You"].push_back("Alice");
 	graph["You"].push_back("Bob");
@@ -43,9 +44,11 @@ int main()
 		
 		if (searched[person] == false)
 		{
+			total++;
 			if (personIsSeller(person))
 			{
 				std::cout << person << " is a mango seller!" << std::endl;
+				std::cout << "We had to ask a total of " << total << " neighbours" << std::endl;
 
 				return 0;
 			}
