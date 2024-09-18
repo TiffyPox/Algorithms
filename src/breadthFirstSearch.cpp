@@ -11,27 +11,6 @@ bool personIsSeller(const std::string& name)
 	return !name.empty() && name.back() == 'm';
 }
 
-void printQueue(std::queue<std::map<std::string, std::vector<std::string>>> q) 
-{
-	while (!q.empty()) 
-	{
-		const auto& map = q.front();
-		for (const auto& pair : map) 
-		{
-			std::cout << "\n" << pair.first << ": ";
-			
-			for (const auto& name: pair.second)
-			{
-				std::cout << name << " ";
-			}
-		}
-
-		std::cout << std::endl;
-
-		q.pop();
-	}
-}
-
 int main()
 {
 	std::cout << "Looking for a mango seller..." << std::endl;
